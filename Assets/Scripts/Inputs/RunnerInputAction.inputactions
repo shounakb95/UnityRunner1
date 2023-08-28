@@ -1,0 +1,166 @@
+{
+    "name": "RunnerInputAction",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "b5ca36da-603a-4a91-a49d-f290d3aec66e",
+            "actions": [
+                {
+                    "name": "Tap",
+                    "type": "Button",
+                    "id": "43ad6acf-169a-4dfe-89e9-229e10494121",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPosition",
+                    "type": "PassThrough",
+                    "id": "c1be187b-4b92-4b82-9e95-52ee3ef2dbeb",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StartDrag",
+                    "type": "PassThrough",
+                    "id": "34fa3e50-be22-42be-85aa-28c79dc0ebd6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EndDrag",
+                    "type": "PassThrough",
+                    "id": "b54dbf33-c977-478c-8658-bb99c27e7848",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7105aa9b-b058-45dd-8333-52b93b321b90",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Computer",
+                    "action": "Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2dfb1427-2d11-482e-9470-7b0df09e31b5",
+                    "path": "<Touchscreen>/touch*/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2119c897-773b-4fba-aaf2-0379ae4e4df9",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Computer",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2145f6e5-3b02-4be5-80f1-118d9a71f5fa",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d42abca3-4116-4993-aa3e-06dcc613e9d1",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Computer",
+                    "action": "StartDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "afc1a80e-e0af-42bc-b2a9-48c6e6640924",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "StartDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5909c260-ac8f-4d43-a188-5a3349223811",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Computer",
+                    "action": "EndDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "625124e3-4e9d-4ab2-95c0-481635fe1e75",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "EndDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Computer",
+            "bindingGroup": "Computer",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Mobile",
+            "bindingGroup": "Mobile",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
