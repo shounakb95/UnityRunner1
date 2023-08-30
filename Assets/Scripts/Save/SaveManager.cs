@@ -30,6 +30,7 @@ public class SaveManager : MonoBehaviour
         try
         {
             FileStream file = new FileStream(Application.persistentDataPath+saveFileName, FileMode.Open, FileAccess.Read);
+            Debug.Log(Application.persistentDataPath + saveFileName);
             save = formatter.Deserialize(file) as SaveState;//deserialze
             file.Close();
             OnLoad?.Invoke(save);

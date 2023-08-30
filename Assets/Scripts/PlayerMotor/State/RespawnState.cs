@@ -18,6 +18,7 @@ public class RespawnState : BaseState
         motor.verticalVelocity = 0.0f;
         motor.currentLane = 0;
         motor.anim?.SetTrigger("Respawn");
+        
        
     }
 

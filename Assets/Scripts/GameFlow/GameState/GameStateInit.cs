@@ -34,7 +34,7 @@ public class GameStateInit : GameState
 
     public void OnShopClick()
     {
-        // brain.ChangeState(GetComponent<GameStateShop>());
+        brain.ChangeState(GetComponent<GameStateShop>());
         Debug.Log("Shop button");
     }
    
