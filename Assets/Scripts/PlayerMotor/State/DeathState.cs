@@ -27,4 +27,11 @@ public class DeathState : BaseState
 
         return currentKnockBack;
     }
+    public override void Transition()
+    {
+        if (Time.timeScale == 0)
+        {
+            GameManager.Instance.ChangeState(GameManager.Instance.GetComponent<GameStatePause>());
+        }
+    }
 }

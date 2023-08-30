@@ -44,4 +44,10 @@ public class GameStateGame : GameState
         GameManager.Instance.sceneChunkGeneration.ScanPosition();
     }
 
+    public void pauseGame()
+    {
+        Time.timeScale = 0;
+        
+    }
+
 }

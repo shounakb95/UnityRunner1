@@ -38,5 +38,9 @@ public class FallingState : BaseState
             //change lane go right
             motor.ChangeLane(1);
         }
+        if (Time.timeScale == 0)
+        {
+            GameManager.Instance.ChangeState(GameManager.Instance.GetComponent<GameStatePause>());
+        }
     }
 }

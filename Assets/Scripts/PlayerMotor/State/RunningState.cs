@@ -48,5 +48,9 @@ public class RunningState : BaseState
         {
             motor.ChangeState(GetComponent<SlidingState>());
         }
+        if(Time.timeScale==0)
+        {
+            GameManager.Instance.ChangeState(GameManager.Instance.GetComponent<GameStatePause>());
+        }
     }
 }
