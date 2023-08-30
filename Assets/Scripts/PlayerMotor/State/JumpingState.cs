@@ -29,5 +29,16 @@ public class JumpingState : BaseState
     {
         if (motor.verticalVelocity < 0)
             motor.ChangeState(GetComponent<FallingState>());
+        if (InputManager.Instance.SwipeLeft)
+        {
+            //change lane go left
+            motor.ChangeLane(-1);
+        }
+
+        if (InputManager.Instance.SwipeRight)
+        {
+            //change lane go right
+            motor.ChangeLane(1);
+        }
     }
 }

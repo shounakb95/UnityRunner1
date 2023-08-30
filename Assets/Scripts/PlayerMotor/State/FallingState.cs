@@ -27,5 +27,16 @@ public class FallingState : BaseState
     {
         if (motor.isGrounded)
             motor.ChangeState(GetComponent<RunningState>());
+        if (InputManager.Instance.SwipeLeft)
+        {
+            //change lane go left
+            motor.ChangeLane(-1);
+        }
+
+        if (InputManager.Instance.SwipeRight)
+        {
+            //change lane go right
+            motor.ChangeLane(1);
+        }
     }
 }
